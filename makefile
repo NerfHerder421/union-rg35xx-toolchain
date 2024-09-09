@@ -11,7 +11,7 @@ NORM=$(shell tput sgr0)
 .build: Dockerfile
 	$(info $(BOLD)Building $(TOOLCHAIN_NAME)...$(NORM))
 	mkdir -p ./workspace
-	docker build -t $(TOOLCHAIN_NAME) .
+	docker build -t union-rg35xx-toolchain .
 	touch .build
 
 ifeq ($(CONTAINER_NAME),)
